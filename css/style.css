@@ -1,0 +1,592 @@
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----Global-----]*/
+:root {
+  --main-color: #037d73;
+  --seconed-color: #04867c;
+  --yellow-color: #fdb245;
+  --green-light: #85be9e;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --light-color: #c4c4c4;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  /* overflow: hidden; */
+}
+/* section {
+  background-color: c4c4c4;
+} */
+.title {
+  text-align: center;
+  padding: 55px 0;
+  color: var(--seconed-color);
+  font-size: 45px;
+  font-weight: 500;
+}
+
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----NavBar----]*/
+.actives {
+  border-bottom: 3px solid var(--yellow-color) !important;
+  color: var(--yellow-color) !important;
+}
+nav {
+  background: var(--main-color);
+}
+nav .navbar-brand {
+  padding: 5px 13px;
+  color: var(--white-color);
+  font-size: 24px;
+  background: var(--green-light);
+  border-radius: 5px;
+}
+nav .navbar-brand:hover {
+  background: #03635b;
+  color: var(--white-color);
+}
+nav .nav-link {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Cairo";
+  color: var(--white-color);
+}
+.nav-link:hover {
+  color: var(--yellow-color) !important;
+}
+nav .nav-item {
+  margin: 0 5px;
+}
+nav button,
+footer .title-footer {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: var(--yellow-color);
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----Header----]*/
+header {
+  min-height: 100vh;
+  background: url("../image/home.png") no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  min-height: calc(100vh + 80px);
+}
+header {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
+header .home-info {
+  padding: 80px 30px 0 0;
+  color: var(--white-color);
+}
+header .home-info h1 {
+  padding: 20px 0;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+header .home-info p {
+  padding: 10px 0;
+  font-size: 35px;
+  width: 60%;
+  margin-left: auto;
+  font-weight: 400;
+  font-family: "Cairo", sans-serif;
+}
+
+header .home-info button::after,
+.accident button::after,
+.connect button::after {
+  content: "سجل الأن";
+  font-size: 30px;
+  padding: 5px 0;
+  font-weight: 500;
+  color: var(--white-color);
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background-color: var(--yellow-color);
+  clip-path: polygon(0 0, 66% 0, 17% 15%, 0 124%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  transition: 1s;
+  z-index: 1;
+}
+.connect button::after {
+  content: "ارسال";
+  font-size: 20px;
+  padding: 5px 0;
+}
+header .home-info button:hover::after,
+.accident button:hover:after,
+.connect button:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .home-info button,
+.accident button,
+.connect button {
+  position: relative;
+  background-color: var(--main-color);
+  padding: 5px 50px;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--white-color);
+  border: none;
+  overflow: hidden;
+}
+header .home-info button:hover,
+.accident button:hover,
+.connect button:hover {
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----carousel----]*/
+section .owl-carousel .item {
+  border: 1px solid #fff;
+  background-color: var(--white-color);
+  padding: 32px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+}
+section .owl-carousel .item h3 {
+  color: #000000c3;
+  font-size: 24px;
+  font-weight: 500;
+}
+.owl-theme .owl-nav {
+  display: none;
+}
+.owl-theme .owl-dots {
+  padding: 40px 0;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--yellow-color);
+}
+
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----About----]*/
+
+.about-info p {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Cairo", sans-serif;
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----Accident----]*/
+.accident {
+  background: var(--seconed-color);
+}
+.accident h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--white-color);
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.accident p {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--white-color);
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----information----]*/
+.information h5 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Cairo", sans-serif;
+}
+.information p {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.info-image {
+  padding: 15px;
+  margin: 0 0 15px 0;
+  background-color: var(--white-color);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 16px 1px #04867c;
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----information----]*/
+.events {
+  width: 80%;
+  min-height: 107vh;
+  margin: auto;
+  border-radius: 10px;
+  background-position: 100%;
+  background-size: 100%;
+  background: linear-gradient(#00000061, #18050545);
+}
+.events img {
+  border-radius: 10px;
+  box-shadow: 0 2px 16px 1px #04867c;
+  position: absolute;
+  z-index: -1;
+}
+.events span {
+  background: var(--white-color);
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  box-shadow: 0 2px 16px 1px var(--yellow-color);
+}
+.events i {
+  font-size: 70px;
+  color: var(--yellow-color);
+  transform: translateX(5px);
+}
+
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----review----]*/
+.carousel {
+  background-color: var(--main-color);
+}
+.imge-carsul {
+  width: 200px;
+  padding: 60px 0 20px 0;
+}
+.carousel-inner h3 {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Cairo", sans-serif;
+  color: var(--white-color);
+  padding: 15px 0;
+}
+.carousel-inner p {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Cairo", sans-serif;
+  color: var(--white-color);
+}
+.carousel-indicators button {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+}
+.carousel-indicators .active {
+  background-color: var(--yellow-color) !important;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  color: var(--yellow-color) !important;
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----review----]*/
+
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----Connect----]*/
+.connect img {
+  transform: translate(-100px);
+}
+.connect input {
+  border: 1px solid var(--seconed-color);
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.connect input:focus {
+  border: none;
+  box-shadow: 3px 1px 13px -2px var(--seconed-color);
+  outline: none;
+}
+.connect .inputs i {
+  font-size: 25px;
+  color: var(--seconed-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  padding: 0 5px 0 0;
+}
+.textarea textarea {
+  width: 100%;
+  height: 205px;
+  padding: 20px;
+  padding-right: 43px;
+  border: 1px solid var(--seconed-color);
+  border-radius: 20px;
+  transition: 0.5s;
+  resize: vertical;
+}
+.textarea i {
+  font-size: 25px;
+  color: var(--seconed-color);
+  position: absolute;
+  top: 22%;
+  transform: translateY(-50%);
+  right: 5px;
+  padding: 0 5px 0 0;
+}
+
+textarea:focus {
+  border: none;
+  box-shadow: 3px 1px 13px -2px var(--seconed-color);
+  outline: none;
+}
+.connect button {
+  padding: 5px 10px;
+  font-size: 20px;
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[----Footer----]*/
+footer {
+  background-color: var(--main-color);
+}
+footer .footer-desc {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--white-color);
+  width: 80%;
+  padding: 15px 0;
+  font-family: "Cairo", sans-serif;
+}
+.social-title {
+  color: var(--white-color);
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Cairo", sans-serif;
+}
+.social-media {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.social-media li {
+  width: 30px;
+  height: 30px;
+  background-color: var(--white-color);
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.social-media li a {
+  text-decoration: none;
+  color: var(--seconed-color);
+}
+
+.main h3,
+.join h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white-color);
+  padding: 0 0 10px 0;
+  font-family: "Cairo", sans-serif;
+}
+.main ul li,
+.join ul li {
+  padding: 5px 0;
+  font-size: 23px;
+  font-weight: 400;
+  list-style: none;
+}
+.main ul li a,
+.join ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+
+  transition: 0.5s;
+}
+.main ul li a:hover,
+.join ul li a:hover {
+  color: var(--yellow-color);
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[---- Scroll up----]*/
+.scroll-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 999;
+  background: var(--seconed-color);
+  font-size: 23px;
+  border-radius: 50%;
+  color: var(--white-color);
+}
+.scroll-up:hover i {
+  color: var(--yellow-color);
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[---- Scrollbar CSS----]*/
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--seconed-color) #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+}
+
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[---- Media-quary----]*/
+@media (max-width: 575.98px) {
+  header .home-info {
+    padding: 80px 30px 0 0;
+    color: var(--white-color);
+  }
+  header .home-info h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  header .home-info p {
+    font-size: 25px;
+    width: 60%;
+  }
+  header .home-info button::after,
+  .accident button::after,
+  .connect button::after {
+    content: "سجل الأن";
+    font-size: 15px;
+    padding: 20px 0;
+    font-weight: 500;
+    color: var(--white-color);
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+  }
+  header .home-info button,
+  .accident button,
+  .connect button {
+    position: relative;
+    background-color: var(--main-color);
+    font-size: 15px;
+    padding: 20px 30px;
+    font-weight: 500;
+  }
+  .accident h2 {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+  .accident p {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white-color);
+  }
+  .accident img {
+    width: 40px;
+  }
+  .imge-carsul {
+    width: 150px;
+    padding: 30px 0 20px 0;
+  }
+  .carousel-inner h3 {
+    font-size: 25px;
+  }
+  .carousel-inner p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .carousel-indicators button {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50%;
+  }
+  .carousel-indicators .active {
+    background-color: var(--yellow-color) !important;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    color: var(--yellow-color) !important;
+  }
+  footer {
+    text-align: center;
+  }
+  .footer-desc {
+    width: 100% !important;
+  }
+  .social-media {
+    justify-content: center;
+  }
+  .events {
+    width: 80%;
+    min-height: 36.9vh;
+  }
+  .events span {
+    background: var(--white-color);
+    width: 60px;
+    height: 60px;
+    top: 25%;
+    left: 50%;
+  }
+  .events span i {
+    font-size: 30px;
+    margin-right: 5px;
+  }
+}
+/* todo>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>[---- loading CSS----]*/
+
+.loading {
+  background: var(--seconed-color);
+  position: fixed;
+  inset: 0;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: relative;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 6px;
+}
+.loader:before {
+  content: "Loading";
+  color: #fff;
+}
+.loader:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--yellow-color);
+  background-image: radial-gradient(circle 2px, #fff4 100%, transparent 0),
+    radial-gradient(circle 1px, #fff3 100%, transparent 0);
+  background-position: 14px -4px, 12px -1px;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 66px;
+  transform-origin: center bottom;
+  animation: fillBaloon 1s ease-in-out infinite alternate;
+}
+
+@keyframes fillBaloon {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
